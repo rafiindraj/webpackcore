@@ -1,0 +1,20 @@
+.container {
+    padding: 16px;
+}
+.full-width {
+    width: 100%;
+}
+
+.mainheader {
+    background-color: #69b6e9;
+    height: 50px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    opacity: 0.5;
+}
+
+.content {
+    font-family: cursive;
+    background-color: rgb(236, 189, 236);
+}
