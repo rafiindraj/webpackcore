@@ -31,7 +31,7 @@ function main() {
             listMovieElement.innerHTML += `
                 <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 12px;">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body content-body">
                             <h5 style='font-size:15px;'>ID: ${item.id}<br>Title: ${item.title}</h5>
                             <p>${item.overview.slice(0, 200)}...</p>
                             <p>Release Date: ${item.release_date}</p>
@@ -44,23 +44,11 @@ function main() {
 
     };
 
-    const renderAllMovie = (items) => {
-        const listMovieElement = document.querySelector("#sortMovie");
-        listMovieElement.innerHTML = "";
-
-        
-    }
-
     const showResponseMessage = (message = "Check your internet connection") => {
         alert(message);
     };
 
     document.addEventListener("DOMContentLoaded", () => {
-
-        const inputMovieId = document.querySelector("#inputMovieId");
-        const inputMovieTitle = document.querySelector("#inputMovieTitle");
-        const inputBookOverview = document.querySelector("#inputBookOverview");
-        const inputBookPopularity = document.querySelector("#inputBookPopularity");
         
         getmovie();
     });

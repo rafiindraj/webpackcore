@@ -6,7 +6,7 @@
 }
 
 .mainheader {
-    background-color: #69b6e9;
+    background-color: #41584b;
     height: 50px;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -16,5 +16,12 @@
 
 .content {
     font-family: cursive;
-    background-color: rgb(236, 189, 236);
+    background-color: #fff3b2;
+}
+
+.content-body {
+    background-color: #ffe0d8;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
