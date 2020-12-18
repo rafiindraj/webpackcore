@@ -23,39 +23,33 @@ function main() {
         xhr.send();
     };
 
-    class listMovie extends HTMLElement {
-        connectedCallback() {
-            this.renderAllMovie();
-        }
-        const renderAllMovie = (items) => {
-            const listMovieElement = document.querySelector("#listMovie");
-            listMovieElement.innerHTML = "";
+    const renderAllMovie = (items) => {
+        const listMovieElement = document.querySelector("#listMovie");
+        listMovieElement.innerHTML = "";
 
-            items.forEach(item => {
-                listMovieElement.innerHTML += `
-                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 12px;">
-                        <div class="card">
-                            <div class="card-body content-body">
-                                <h5 style='font-size:15px;'>ID: ${item.id}<br>Title: ${item.title}</h5>
-                                <p>${item.overview.slice(0, 200)}...</p>
-                                <p>Release Date: ${item.release_date}</p>
-                                <p>Rate : ${item.popularity}%</p>
-                            </div>
+        items.forEach(item => {
+            listMovieElement.innerHTML += `
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 12px;">
+                    <div class="card">
+                        <div class="card-body content-body">
+                            <h5 style='font-size:15px;'>ID: ${item.id}<br>Title: ${item.title}</h5>
+                            <p>${item.overview.slice(0, 200)}...</p>
+                            <p>Release Date: ${item.release_date}</p>
+                            <p>Rate : ${item.popularity}%</p>
                         </div>
                     </div>
-                `;
-            });
+                </div>
+            `;
+        });
 
-        };
     };
-    customElements.define("listMovie", listMovie);
 
     const showResponseMessage = (message = "Check your internet connection") => {
         alert(message);
     };
 
     document.addEventListener("DOMContentLoaded", () => {
-
+        
         getmovie();
     });
 }
