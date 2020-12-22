@@ -27,7 +27,7 @@ function main() {
         connectedCallback() {
             this.renderAllMovie();
         }
-        const renderAllMovie = (items) => {
+        renderAllMovie(){
             const listMovieElement = document.querySelector("#listMovie");
             listMovieElement.innerHTML = "";
 
